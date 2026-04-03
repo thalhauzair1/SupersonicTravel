@@ -1,0 +1,208 @@
+/* Additional styles to append to components.css conceptually, but we can write them directly or append later via tool, let's write to another file and import, or just put them here for now */
+
+/* Services Grid */
+.service-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+@media (min-width: 768px) {
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .service-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.service-card {
+  background: var(--bg-color-card);
+  border-radius: var(--radius-lg);
+  padding: 50px 30px;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: var(--border-glass);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+  transition: transform 0.8s ease;
+}
+
+.service-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(to bottom, rgba(5,5,5,0.2) 0%, rgba(5,5,5,0.95) 100%);
+  z-index: -1;
+}
+
+.service-card h3 {
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  color: #FFFFFF;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--color-primary);
+}
+
+.service-card:hover::before {
+  transform: scale(1.1);
+}
+
+.service-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 24px;
+  background: var(--icon-bg);
+  color: var(--color-primary);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  border: var(--icon-border);
+}
+
+.service-card:hover .service-icon {
+  background: var(--color-gradient-primary);
+  color: var(--text-color-light);
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: var(--glow-primary);
+  border-color: transparent;
+}
+
+/* Deals */
+.deals-section {
+  position: relative;
+}
+
+.deal-card {
+  background: var(--bg-color-card);
+  border: var(--border-glass);
+  border-radius: var(--radius-lg);
+  min-width: 350px;
+  flex: 0 0 auto;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.deal-img-wrapper {
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.deal-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.deal-card:hover .deal-img {
+  transform: scale(1.05);
+}
+
+.deal-content {
+  padding: 30px;
+}
+
+.deal-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-5px);
+}
+
+.deal-card h3 {
+  color: var(--text-color-primary);
+  font-size: 1.5rem;
+}
+
+.deal-price {
+  font-size: 2.5rem;
+  font-weight: 800;
+  font-family: var(--font-family-heading);
+  background: linear-gradient(135deg, #FFB020 0%, #FF8A00 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 15px 0 25px;
+}
+
+/* Alert Form & Inputs */
+.alert-form-section {
+  background: var(--bg-color-card);
+  border: var(--border-glass);
+  backdrop-filter: blur(20px);
+  border-radius: var(--radius-lg);
+  padding: 50px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: var(--shadow-lg);
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: var(--text-color-secondary);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%;
+  padding: 14px 20px;
+  background: var(--input-bg);
+  border: var(--input-border);
+  border-radius: var(--radius-sm);
+  color: var(--text-color-primary);
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background: var(--input-bg-focus);
+  box-shadow: var(--input-shadow-focus);
+}
+
+.form-group input::placeholder, .form-group textarea::placeholder {
+  color: var(--text-color-secondary);
+}
