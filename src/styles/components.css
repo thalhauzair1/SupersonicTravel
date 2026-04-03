@@ -126,6 +126,19 @@
   color: var(--text-color-light);
 }
 
+.btn-outline {
+  background: transparent;
+  color: var(--text-color-primary);
+  border: 1px solid var(--border-glass);
+}
+
+.btn-outline:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: translateY(-2px);
+  background: var(--input-bg-focus);
+}
+
 /* Footer */
 .footer {
   background-color: var(--bg-color-footer);

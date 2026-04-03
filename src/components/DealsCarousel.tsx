@@ -26,7 +26,7 @@ export default function DealsCarousel() {
       <div className="container">
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '40px' }}>
           <h2>Hottest Fares of the Week</h2>
-          <button className="btn btn-primary" style={{ background: 'transparent', border: '1px solid var(--text-color-light)'}}>View All Deals</button>
+          <button className="btn btn-outline">View All Deals</button>
         </div>
         
         <motion.div ref={carouselRef} style={{ cursor: 'grab', overflow: 'hidden' }}>
