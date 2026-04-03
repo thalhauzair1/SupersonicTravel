@@ -24,7 +24,7 @@ export default function DealsCarousel() {
   return (
     <section className="section-padding deals-section">
       <div className="container">
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '40px' }}>
+        <div className="deals-header" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', marginBottom: '40px', gap: '20px' }}>
           <h2>Hottest Fares of the Week</h2>
           <button className="btn btn-outline">View All Deals</button>
         </div>

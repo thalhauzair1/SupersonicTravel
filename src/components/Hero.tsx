@@ -14,7 +14,7 @@ export default function Hero() {
           <p>
             Your highly professional, personalised, and friendly travel partner for over 11 years. Making travel easy, one flight at a time.
           </p>
-          <div style={{ display: 'flex', gap: '15px' }}>
+          <div className="hero-actions">
             <motion.a 
               href="#deals"
               whileHover={{ scale: 1.05 }}

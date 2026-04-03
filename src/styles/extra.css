@@ -206,3 +206,14 @@
 .form-group input::placeholder, .form-group textarea::placeholder {
   color: var(--text-color-secondary);
 }
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.form-row > * {
+  flex: 1 1 250px;
+}

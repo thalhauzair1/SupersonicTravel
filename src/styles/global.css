@@ -163,3 +163,11 @@ img {
 .section-padding {
   padding: var(--spacing-section) 0;
 }
+
+/* Global Mobile Responsiveness */
+@media (max-width: 768px) {
+  h1 { font-size: 2.8rem !important; }
+  h2 { font-size: 2rem !important; }
+  .section-padding { padding: 60px 0; }
+  .container { padding: 0 15px; }
+}

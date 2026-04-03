@@ -65,7 +65,7 @@ export default function Navbar() {
 
         {/* Mobile Nav Toggle */}
         <button
-          className="mobile-menu-btn"
+          className={`mobile-menu-btn ${isMobileMenuOpen ? 'open' : ''}`}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X /> : <Menu />}

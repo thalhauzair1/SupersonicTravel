@@ -52,12 +52,12 @@ export default function ContactSection() {
               <label>Full Name *</label>
               <input type="text" required placeholder="Jane Doe" />
             </div>
-            <div className="form-group" style={{ display: 'flex', gap: '20px' }}>
-              <div style={{ flex: 1 }}>
+            <div className="form-group form-row">
+              <div className="form-col">
                 <label>Email *</label>
                 <input type="email" required placeholder="jane@example.com" />
               </div>
-              <div style={{ flex: 1 }}>
+              <div className="form-col">
                 <label>Phone *</label>
                 <input type="tel" required placeholder="Mobile number" />
               </div>
